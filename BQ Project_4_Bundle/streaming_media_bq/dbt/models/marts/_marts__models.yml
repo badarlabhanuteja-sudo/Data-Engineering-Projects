@@ -1,0 +1,73 @@
+version: 2
+models:
+  # ---- core ----
+  - name: dim_date
+    columns:
+      - name: date_sk
+        data_tests: [not_null, unique]
+  - name: dim_title
+    columns:
+      - name: title_sk
+        data_tests: [not_null, unique]
+      - name: title_business_key
+        data_tests: [not_null]
+  - name: dim_user_scd2
+    columns:
+      - name: user_sk
+        data_tests: [not_null, unique]
+      - name: user_business_key
+        data_tests: [not_null]
+  - name: fct_view_events
+    columns:
+      - name: view_event_id
+        data_tests: [not_null, unique]
+      - name: user_business_key
+        data_tests:
+          - not_null
+          - relationships: { to: ref('dim_user_scd2'), field: user_business_key }
+      - name: title_business_key
+        data_tests:
+          - not_null
+          - relationships: { to: ref('dim_title'), field: title_business_key }
+  - name: fct_sessions
+    columns:
+      - name: session_id
+        data_tests: [not_null, unique]
+  # ---- engagement ----
+  - name: mart_user_engagement
+    columns:
+      - name: user_id
+        data_tests: [not_null, unique]
+      - name: activity_band
+        data_tests:
+          - accepted_values:
+              values: ['never_active','weekly_active','monthly_active','lapsed','churned']
+  - name: mart_completion_rates_by_genre
+  # ---- content ----
+  - name: mart_content_performance
+    columns:
+      - name: title_id
+        data_tests: [not_null, unique]
+      - name: performance_band
+        data_tests:
+          - accepted_values: { values: ['hit','popular','modest','niche'] }
+exposures:
+  - name: viewer_360_dashboard
+    type: dashboard
+    maturity: high
+    description: "Viewer engagement dashboard"
+    depends_on:
+      - ref('mart_user_engagement')
+      - ref('mart_completion_rates_by_genre')
+    owner:
+      name: MSc Capstone
+      email: msc.student@example.com
+  - name: content_performance_dashboard
+    type: dashboard
+    maturity: high
+    description: "Content performance dashboard"
+    depends_on:
+      - ref('mart_content_performance')
+    owner:
+      name: MSc Capstone
+      email: msc.student@example.com

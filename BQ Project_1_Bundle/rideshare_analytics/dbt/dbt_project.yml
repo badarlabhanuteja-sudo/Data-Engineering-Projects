@@ -1,0 +1,67 @@
+name: 'rideshare_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'rideshare_analytics'
+
+model-paths:    ["models"]
+seed-paths:     ["seeds"]
+test-paths:     ["tests"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages", "logs"]
+
+vars:
+  analysis_as_of_date: '2025-12-31'
+  surge_threshold_high: 2.0
+  driver_active_window_hours: 24
+
+models:
+  rideshare_analytics:
+    +persist_docs:
+      relation: true
+      columns: true
+
+    staging:
+      +schema: staging
+      +materialized: view
+      +tags: ["staging", "silver"]
+
+    intermediate:
+      +schema: intermediate
+      +materialized: ephemeral
+      +tags: ["intermediate", "silver"]
+
+    marts:
+      +schema: marts
+      +tags: ["marts", "gold"]
+      core:
+        +materialized: table
+      operations:
+        +materialized: table
+      finance:
+        +materialized: table
+      executive:
+        +materialized: table
+
+snapshots:
+  rideshare_analytics:
+    +target_schema: snapshots
+    +strategy: timestamp
+    +updated_at: updated_at
+    +invalidate_hard_deletes: true
+
+seeds:
+  rideshare_analytics:
+    +schema: seeds
+    +quote_columns: false
+
+tests:
+  +severity: error
+  +store_failures: true
+  +schema: dbt_test_failures
+
+

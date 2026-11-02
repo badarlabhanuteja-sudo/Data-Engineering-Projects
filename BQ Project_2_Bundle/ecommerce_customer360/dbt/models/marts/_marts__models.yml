@@ -1,0 +1,148 @@
+version: 2
+
+models:
+  # ---------------- core ----------------
+  - name: dim_customer_scd2
+    description: "Type 2 slowly-changing customer dimension"
+    columns:
+      - name: customer_sk
+        data_tests: [not_null, unique]
+      - name: customer_business_key
+        data_tests: [not_null]
+      - name: is_current
+        data_tests: [not_null]
+
+  - name: dim_product_scd2
+    description: "Type 2 slowly-changing product dimension with category hierarchy"
+    columns:
+      - name: product_sk
+        data_tests: [not_null, unique]
+      - name: product_business_key
+        data_tests: [not_null]
+
+  - name: dim_date
+    description: "Date dimension covering 2022-01-01 through 2026-12-31"
+    columns:
+      - name: date_sk
+        data_tests: [not_null, unique]
+      - name: date_day
+        data_tests: [not_null, unique]
+
+  - name: dim_geography
+    columns:
+      - name: geography_sk
+        data_tests: [not_null, unique]
+
+  - name: fct_orders
+    description: "Order header fact, incremental on _loaded_at"
+    columns:
+      - name: order_id
+        data_tests: [not_null, unique]
+      - name: customer_business_key
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_customer_scd2')
+                field: customer_business_key
+      - name: total_amount
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: fct_order_items
+    columns:
+      - name: order_item_id
+        data_tests: [not_null, unique]
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('fct_orders')
+              field: order_id
+
+  - name: fct_web_sessions
+    columns:
+      - name: session_id
+        data_tests: [not_null, unique]
+
+  # ---------------- customer ----------------
+  - name: mart_customer_360
+    description: "Unified Customer 360 — one row per current customer"
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: gross_revenue
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: mart_rfm_segments
+    description: "BASELINE classifier — Hughes RFM segmentation"
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: r_score
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 1 and 5"
+      - name: f_score
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 1 and 5"
+      - name: m_score
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 1 and 5"
+
+  - name: mart_churn_features
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+
+  - name: mart_churn_prediction
+    description: "INTERVENTION classifier — XGBoost via Dataproc"
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: predicted_churn_score_ml
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: "between 0 and 1"
+
+  - name: mart_clv_segments
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: clv_segment
+        data_tests:
+          - accepted_values:
+              values: ['Top', 'High', 'Mid', 'Low']
+
+  # ---------------- product ----------------
+  - name: mart_product_affinity
+  - name: mart_cohort_retention
+
+exposures:
+  - name: customer_360_dashboard
+    type: dashboard
+    maturity: high
+    description: "Looker / Tableau dashboard powered by mart_customer_360"
+    depends_on:
+      - ref('mart_customer_360')
+      - ref('mart_rfm_segments')
+      - ref('mart_clv_segments')
+    owner:
+      name: MSc Capstone
+      email: msc.student@example.com
+
+  - name: churn_priority_export
+    type: application
+    maturity: medium
+    description: "Order header fact, incrementally processed using updated_at"
+    depends_on:
+      - ref('mart_rfm_segments')
+      - ref('mart_churn_prediction')
+    owner:
+      name: MSc Capstone
+      email: msc.student@example.com

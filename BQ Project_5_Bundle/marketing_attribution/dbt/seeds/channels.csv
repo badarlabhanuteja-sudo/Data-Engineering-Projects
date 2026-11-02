@@ -1,0 +1,6 @@
+channel,channel_type,is_paid,description
+google_ads,paid_search,true,Google Search and Display Network
+meta_ads,paid_social,true,Facebook + Instagram advertising
+tiktok_ads,paid_social,true,TikTok For Business advertising
+email,owned,false,Owned email marketing
+web,organic,false,Direct + organic web traffic

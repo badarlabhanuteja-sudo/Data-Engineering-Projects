@@ -1,0 +1,61 @@
+version: 2
+
+sources:
+  - name: raw
+    description: "Bronze layer — source-system tables"
+    database: project-d8d88b02-3334-4b57-b24
+    schema: raw
+    loaded_at_field: _loaded_at
+    freshness:
+      warn_after:  {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: raw_cities
+        columns:
+          - name: city_id
+            data_tests: [not_null, unique]
+
+      - name: raw_drivers
+        columns:
+          - name: driver_id
+            data_tests: [not_null, unique]
+          - name: home_city_id
+            data_tests: [not_null]
+
+      - name: raw_riders
+        columns:
+          - name: rider_id
+            data_tests: [not_null, unique]
+
+      - name: raw_trips
+        columns:
+          - name: trip_id
+            data_tests: [not_null, unique]
+          - name: rider_id
+            data_tests: [not_null]
+          - name: driver_id
+            data_tests: [not_null]
+          - name: city_id
+            data_tests: [not_null]
+
+      - name: raw_payments
+        columns:
+          - name: payment_id
+            data_tests: [not_null]
+          - name: trip_id
+            data_tests: [not_null]
+
+      - name: raw_location_pings
+        freshness:
+          warn_after:  {count: 1, period: hour}
+          error_after: {count: 6, period: hour}
+        columns:
+          - name: ping_id
+            data_tests: [not_null]
+          - name: driver_id
+            data_tests: [not_null]
+          - name: ping_timestamp
+            data_tests: [not_null]
+
+

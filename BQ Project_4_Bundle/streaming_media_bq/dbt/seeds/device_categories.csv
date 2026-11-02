@@ -1,0 +1,7 @@
+device_type,device_category,supports_4k
+smart_tv,tv,true
+ios,mobile,true
+android,mobile,true
+web,desktop,true
+roku,streaming_stick,true
+chromecast,streaming_stick,true

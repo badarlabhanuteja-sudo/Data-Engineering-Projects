@@ -1,0 +1,84 @@
+version: 2
+
+sources:
+  - name: RAW
+    description: "Bronze layer — raw source-system tables loaded by data generator"
+    database: "{{ env_var('GCP_PROJECT_ID', 'project-d8d88b02-3334-4b57-b24') }}"
+    schema: RAW
+    loaded_at_field: _loaded_at
+    freshness:
+      warn_after:  {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: raw_customers
+        description: "Customer master from OLTP"
+        columns:
+          - name: customer_id
+            description: "Primary key from OLTP"
+            data_tests: [not_null, unique]
+          - name: email
+          - name: signup_date
+            data_tests: [not_null]
+          - name: customer_tier
+
+      - name: raw_products
+        description: "Product catalogue"
+        columns:
+          - name: product_id
+            data_tests: [not_null, unique]
+          - name: category_id
+            data_tests: [not_null]
+          - name: unit_price
+            data_tests: [not_null]
+
+      - name: raw_categories
+        description: "Category taxonomy"
+        columns:
+          - name: category_id
+            data_tests: [not_null, unique]
+
+      - name: raw_orders
+        description: "Order header from OLTP"
+        columns:
+          - name: order_id
+            data_tests: [not_null, unique]
+          - name: customer_id
+            data_tests: [not_null]
+          - name: order_date
+            data_tests: [not_null]
+
+      - name: raw_order_items
+        description: "Order line items from OLTP"
+        columns:
+          - name: order_item_id
+            data_tests: [not_null, unique]
+          - name: order_id
+            data_tests: [not_null]
+          - name: product_id
+            data_tests: [not_null]
+
+      - name: raw_web_events
+        description: "Web clickstream JSON events"
+        freshness:
+          warn_after:  {count: 1, period: hour}
+          error_after: {count: 6, period: hour}
+        columns:
+          - name: event_id
+            data_tests: [not_null]
+          - name: customer_id
+          - name: event_timestamp
+            data_tests: [not_null]
+          - name: event_type
+            data_tests:
+              - not_null:
+                  severity: warn
+
+      - name: raw_email_events
+        description: "Email-marketing engagement events"
+        columns:
+          - name: email_event_id
+            data_tests: [not_null, unique]
+          - name: customer_id
+            data_tests: [not_null]
+

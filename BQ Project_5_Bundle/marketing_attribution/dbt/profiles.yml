@@ -1,0 +1,21 @@
+marketing_attribution:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: project-d8d88b02-3334-4b57-b24
+      dataset: marketing_db
+      location: US
+      compute_region: US        # ← add this line
+      threads: 4
+      keyfile: "C:/Users/lohit/BQ Project_2_Bundle/ecommerce_customer360/credentials/project-d8d88b02-3334-4b57-b24-ea005ec99141.json"
+
+    # Alternatively, use oauth for local dev (runs as your gcloud user):
+    # dev_oauth:
+    #   type: bigquery
+    #   method: oauth
+    #   project: "{{ env_var('project-d8d88b02-3334-4b57-b24') }}"
+    #   dataset: raw
+    #   location: US
+    #   threads: 4

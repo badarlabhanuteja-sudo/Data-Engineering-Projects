@@ -1,0 +1,7 @@
+version: 2
+
+seeds:
+  - name: channels
+    columns:
+      - name: channel
+        data_tests: [not_null, unique]

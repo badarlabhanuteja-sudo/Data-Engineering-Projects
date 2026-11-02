@@ -1,0 +1,19 @@
+ecommerce_customer360:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('BIGQUERY_PROJECT', 'project-d8d88b02-3334-4b57-b24') }}"
+      dataset: dbt
+      threads: 4
+      timeout_seconds: 300
+      location: "{{ env_var('BIGQUERY_LOCATION', 'US') }}"
+      
+      compute_region: us-central1
+      gcs_bucket: signed_url_demo12
+      keyfile: C:\Users\lohit\BQ Project_2_Bundle\ecommerce_customer360\credentials\project-d8d88b02-3334-4b57-b24-ea005ec99141.json
+      job_label:
+        dbt_job: "dbt-msc-capstone-p2"
+
+

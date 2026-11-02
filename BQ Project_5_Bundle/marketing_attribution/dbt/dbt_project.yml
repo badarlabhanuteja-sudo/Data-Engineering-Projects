@@ -1,0 +1,67 @@
+name: 'marketing_attribution'
+version: '1.0.0'
+config-version: 2
+
+profile: 'marketing_attribution'
+
+model-paths:    ["models"]
+seed-paths:     ["seeds"]
+test-paths:     ["tests"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages", "logs"]
+
+vars:
+  analysis_as_of_date: '2025-12-31'
+  attribution_window_days: 30          # only touchpoints within 30 days before conversion count
+  time_decay_half_life_days: 7
+  gcp_project: "{{ env_var('GCP_PROJECT') }}"
+
+models:
+  marketing_attribution:
+    +persist_docs:
+      relation: true
+      columns: true
+
+    staging:
+      +schema: raw
+      +materialized: view
+      +tags: ["staging", "silver"]
+
+    intermediate:
+      +schema: raw
+      +materialized: ephemeral
+      +tags: ["intermediate", "silver"]
+
+    marts:
+      +schema: analytics
+      +tags: ["marts", "gold"]
+      core:
+        +materialized: table
+      attribution:
+        +materialized: table
+        +tags: ["attribution"]
+      recommendations:
+        +materialized: table
+
+snapshots:
+  marketing_attribution:
+    +target_schema: raw
+
+seeds:
+  marketing_attribution:
+    +schema: raw
+    +quote_columns: false
+
+tests:
+  +severity: error
+  # +store_failures: true
+  # +schema: dbt_test_failures
+
+# on-run-start:
+#   - "{{ create_run_history_table_if_not_exists() }}"
+# on-run-end:
+#   - "{{ insert_run_history_row(results) }}"

@@ -1,0 +1,6 @@
+country_code,country_name,region,currency
+IN,India,APAC,INR
+GB,United Kingdom,EMEA,GBP
+US,United States,NAM,USD
+CA,Canada,NAM,CAD
+AU,Australia,APAC,AUD

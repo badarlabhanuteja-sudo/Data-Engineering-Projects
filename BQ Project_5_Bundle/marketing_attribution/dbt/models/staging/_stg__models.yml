@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_google_ads
+  - name: stg_meta_ads
+  - name: stg_tiktok_ads
+  - name: stg_email_events
+  - name: stg_web_events
+  - name: stg_conversions
+    columns:
+      - name: conversion_id
+        data_tests: [not_null, unique]
+      - name: revenue
+        data_tests:
+          - dbt_utils.expression_is_true: { expression: ">= 0" }
+  - name: stg_ad_spend
+  - name: stg_user_identity
+    columns:
+      - name: user_id
+        data_tests: [not_null, unique]

@@ -1,0 +1,6 @@
+vehicle_type,description,seats,base_per_km_inr
+auto,Three-wheeler auto-rickshaw,3,8.0
+mini,Compact hatchback,4,12.0
+sedan,Mid-size sedan,4,16.0
+suv,Sport-utility vehicle,6,22.0
+electric,Electric vehicle,4,14.0

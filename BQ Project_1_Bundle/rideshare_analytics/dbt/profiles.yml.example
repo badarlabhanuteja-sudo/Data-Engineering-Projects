@@ -1,0 +1,16 @@
+# Reference: this file works as-is once .env is populated. Inside Docker,
+# DBT_PROFILES_DIR is /workspace/dbt and dbt picks up profiles.yml directly.
+
+rideshare_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: <your_account>.<region>.<cloud>
+      user:    DBT_USER
+      password: <password>
+      role:     DBT_ROLE
+      warehouse: DBT_WH_XS
+      database: RIDESHARE_DB
+      schema:   DBT
+      threads:  4

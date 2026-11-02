@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('GCP_PROJECT') }}"
+    schema: raw
+    loaded_at_field: _loaded_at
+    freshness:
+      warn_after:  {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: raw_google_ads
+        columns:
+          - name: google_event_id
+            data_tests: [not_null]
+      - name: raw_meta_ads
+        columns:
+          - name: meta_event_id
+            data_tests: [not_null]
+      - name: raw_tiktok_ads
+        columns:
+          - name: tiktok_event_id
+            data_tests: [not_null]
+      - name: raw_email_events
+        columns:
+          - name: email_event_id
+            data_tests: [not_null]
+      - name: raw_web_events
+        columns:
+          - name: event_id
+            data_tests: [not_null]
+      - name: raw_conversions
+        columns:
+          - name: conversion_id
+            data_tests: [not_null, unique]
+          - name: user_id
+            data_tests: [not_null]
+      - name: raw_ad_spend
+        columns:
+          - name: spend_id
+            data_tests: [not_null]
+      - name: raw_user_identity
+        columns:
+          - name: user_id
+            data_tests: [not_null, unique]

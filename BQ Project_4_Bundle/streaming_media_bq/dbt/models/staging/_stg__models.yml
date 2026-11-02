@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_titles
+    columns:
+      - name: title_id
+        data_tests: [not_null, unique]
+      - name: content_type
+        data_tests:
+          - accepted_values: { values: ['movie', 'show', 'episode'] }
+  - name: stg_users
+    columns:
+      - name: user_id
+        data_tests: [not_null, unique]
+      - name: plan_tier
+        data_tests:
+          - accepted_values: { values: ['basic', 'standard', 'premium', 'family'] }
+  - name: stg_sessions
+    columns:
+      - name: session_id
+        data_tests: [not_null, unique]
+      - name: user_id
+        data_tests:
+          - not_null
+          - relationships: { to: ref('stg_users'), field: user_id }
+  - name: stg_view_events
+    columns:
+      - name: view_event_id
+        data_tests: [not_null]
+      - name: event_type
+        data_tests:
+          - accepted_values: { values: ['play','pause','resume','complete','abandon','skip','stop'] }
+  - name: stg_ratings
+    columns:
+      - name: rating_id
+        data_tests: [not_null, unique]
+      - name: rating
+        data_tests:
+          - dbt_utils.expression_is_true: { expression: "between 0.5 and 5.0" }

@@ -1,0 +1,13 @@
+version: 2
+
+seeds:
+  - name: vehicle_types
+    config:
+      column_types:
+        vehicle_type: STRING
+        description: STRING
+        seats: INT64
+        base_per_km_inr: FLOAT64
+    columns:
+      - name: vehicle_type
+        data_tests: [not_null, unique]

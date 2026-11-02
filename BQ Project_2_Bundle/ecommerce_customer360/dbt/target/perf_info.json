@@ -1,0 +1,90 @@
+{
+    "path_count": 385,
+    "parsed_path_count": 385,
+    "static_analysis_path_count": 26,
+    "static_analysis_parsed_path_count": 13,
+    "is_partial_parse_enabled": false,
+    "is_static_analysis_enabled": true,
+    "read_files_elapsed": 0.38206560000071477,
+    "load_macros_elapsed": 4.529249700000946,
+    "parse_project_elapsed": 3.714279699999679,
+    "patch_sources_elapsed": 0.15292130000125326,
+    "process_manifest_elapsed": 0.17416249999951106,
+    "load_all_elapsed": 9.26472929999909,
+    "projects": [
+        {
+            "project_name": "ecommerce_customer360",
+            "elapsed": 3.6113421999998536,
+            "parsers": [
+                {
+                    "parser": "model",
+                    "elapsed": 1.044534200000271,
+                    "parsed_path_count": 26
+                },
+                {
+                    "parser": "snapshot",
+                    "elapsed": 0.5472009000004618,
+                    "parsed_path_count": 2
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 0.2556143999991036,
+                    "parsed_path_count": 1
+                },
+                {
+                    "parser": "seed",
+                    "elapsed": 0.38597759999902337,
+                    "parsed_path_count": 1
+                },
+                {
+                    "parser": "test",
+                    "elapsed": 1.355824100000973,
+                    "parsed_path_count": 4
+                }
+            ],
+            "parsed_path_count": 34
+        },
+        {
+            "project_name": "dbt_bigquery",
+            "elapsed": 0.024314099999173777,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt",
+            "elapsed": 0.016121799999382347,
+            "parsers": [
+                {
+                    "parser": "doc",
+                    "elapsed": 0.0006587000007129973,
+                    "parsed_path_count": 1
+                }
+            ],
+            "parsed_path_count": 1
+        },
+        {
+            "project_name": "codegen",
+            "elapsed": 0.016211299998758477,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt_date",
+            "elapsed": 0.017382700001689955,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt_expectations",
+            "elapsed": 0.013941700000941637,
+            "parsers": [],
+            "parsed_path_count": 0
+        },
+        {
+            "project_name": "dbt_utils",
+            "elapsed": 0.014500899998893146,
+            "parsers": [],
+            "parsed_path_count": 0
+        }
+    ]
+}

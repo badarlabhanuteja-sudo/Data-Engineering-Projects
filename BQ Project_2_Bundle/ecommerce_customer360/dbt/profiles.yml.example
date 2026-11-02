@@ -1,0 +1,39 @@
+# Copy this file to ~/.dbt/profiles.yml (or set DBT_PROFILES_DIR to point here),
+# then fill in your BigQuery credentials. The Docker image has DBT_PROFILES_DIR
+# pre-set to /workspace/dbt, so this file works as-is once .env is populated.
+#
+# Authentication options:
+#   method: oauth                  — uses gcloud application-default credentials
+#                                    (run `gcloud auth application-default login` first)
+#   method: service-account        — uses a JSON key file (recommended for CI/CD)
+#     keyfile: /path/to/key.json
+#   method: service-account-json   — inline JSON key via env var
+#     keyfile_json: "{{ env_var('BIGQUERY_KEYFILE_JSON') }}"
+
+ecommerce_customer360:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project:  "{{ env_var('BIGQUERY_PROJECT', 'ecommerce-db') }}"
+      dataset:  dbt                        # default dataset; per-folder overrides apply
+      threads: 4
+      timeout_seconds: 300
+      location: "{{ env_var('BIGQUERY_LOCATION', 'US') }}"
+      priority: interactive
+      job_label:
+        dbt_job: "dbt-{{ env_var('USER', 'msc') }}"
+
+    prod:
+      type: bigquery
+      method: service-account
+      project:  "{{ env_var('BIGQUERY_PROJECT', 'ecommerce-db') }}"
+      keyfile:  "{{ env_var('BIGQUERY_KEYFILE', '/secrets/bq-key.json') }}"
+      dataset:  dbt_prod
+      threads: 8
+      timeout_seconds: 600
+      location: "{{ env_var('BIGQUERY_LOCATION', 'US') }}"
+      priority: batch
+      job_label:
+        dbt_job: "dbt-prod"

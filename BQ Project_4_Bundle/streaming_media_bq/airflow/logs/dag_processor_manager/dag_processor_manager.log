@@ -1,0 +1,818 @@
+[2026-06-05T11:04:52.963+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2026-06-05T11:04:52.965+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2026-06-05T11:04:52.967+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2026-06-05T11:04:52.968+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:04:53.047+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:04:53.156+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/common.py                                            0           0                                                   0
+/opt/airflow/dags/dbt_full_dag.py               164  0.05s             0           0                                                   0
+/opt/airflow/dags/dbt_test_dag.py               167  0.02s             0           0                                                   0
+/opt/airflow/dags/experiment_dag.py                                    0           0                                                   0
+/opt/airflow/dags/extract_streaming_dag.py                             0           0                                                   0
+/opt/airflow/dags/recommender_hourly_dag.py                            0           0                                                   0
+/opt/airflow/dags/recommender_nightly_dag.py                           0           0                                                   0
+================================================================================
+[2026-06-05T11:05:23.397+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.92s           2026-06-05T11:04:54                      45
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.86s           2026-06-05T11:04:54                      45
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.46s           2026-06-05T11:04:54                      45
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.43s           2026-06-05T11:04:54                      43
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.43s           2026-06-05T11:04:54                      45
+/opt/airflow/dags/common.py                                            0           0  0.15s           2026-06-05T11:04:54                       3
+/opt/airflow/dags/dbt_full_dag.py               199  0.00s             0           1  0.13s           2026-06-05T11:04:53                       3
+================================================================================
+[2026-06-05T11:05:53.542+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.17s           2026-06-05T11:05:25                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.17s           2026-06-05T11:05:24                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.15s           2026-06-05T11:05:23                       5
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.14s           2026-06-05T11:05:24                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.14s           2026-06-05T11:05:24                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.13s           2026-06-05T11:05:24                      10
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:05:25                       3
+================================================================================
+[2026-06-05T11:06:23.886+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.21s           2026-06-05T11:05:55                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.19s           2026-06-05T11:05:55                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:05:55                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.14s           2026-06-05T11:05:55                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.12s           2026-06-05T11:05:55                      12
+/opt/airflow/dags/common.py                                            0           0  0.12s           2026-06-05T11:05:55                       3
+/opt/airflow/dags/dbt_full_dag.py               269  0.00s             0           1  0.09s           2026-06-05T11:05:53                       5
+================================================================================
+[2026-06-05T11:06:53.958+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.16s           2026-06-05T11:06:26                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.14s           2026-06-05T11:06:26                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.14s           2026-06-05T11:06:26                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.13s           2026-06-05T11:06:26                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:06:23                       5
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.10s           2026-06-05T11:06:26                      10
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:06:26                       3
+================================================================================
+[2026-06-05T11:07:24.353+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.19s           2026-06-05T11:06:57                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:06:57                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.14s           2026-06-05T11:06:57                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.14s           2026-06-05T11:06:57                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.13s           2026-06-05T11:06:57                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.10s           2026-06-05T11:06:55                       5
+/opt/airflow/dags/common.py                                            0           0  0.10s           2026-06-05T11:06:57                       3
+================================================================================
+[2026-06-05T11:07:54.555+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.18s           2026-06-05T11:07:27                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.17s           2026-06-05T11:07:27                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.16s           2026-06-05T11:07:27                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:07:27                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:07:27                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.13s           2026-06-05T11:07:25                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:07:28                       3
+================================================================================
+[2026-06-05T11:08:24.613+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:07:57                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.15s           2026-06-05T11:07:59                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.14s           2026-06-05T11:07:57                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.13s           2026-06-05T11:07:59                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.12s           2026-06-05T11:07:57                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:07:55                       5
+/opt/airflow/dags/common.py                                            0           0  0.07s           2026-06-05T11:07:59                       3
+================================================================================
+[2026-06-05T11:08:54.673+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.22s           2026-06-05T11:08:30                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.21s           2026-06-05T11:08:30                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.18s           2026-06-05T11:08:28                      12
+/opt/airflow/dags/common.py                                            0           0  0.16s           2026-06-05T11:08:30                       3
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.16s           2026-06-05T11:08:29                      10
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:08:28                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.12s           2026-06-05T11:08:26                       5
+================================================================================
+[2026-06-05T11:09:24.910+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:09:00                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:09:00                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.13s           2026-06-05T11:09:00                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.13s           2026-06-05T11:09:00                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:09:00                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.12s           2026-06-05T11:08:57                       5
+/opt/airflow/dags/common.py                                            0           0  0.06s           2026-06-05T11:09:00                       3
+================================================================================
+[2026-06-05T11:09:52.996+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:09:53.161+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:09:54.932+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.14s           2026-06-05T11:09:31                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.14s           2026-06-05T11:09:31                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.14s           2026-06-05T11:09:31                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.13s           2026-06-05T11:09:31                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.12s           2026-06-05T11:09:31                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:09:28                       5
+/opt/airflow/dags/common.py                                            0           0  0.07s           2026-06-05T11:09:31                       3
+================================================================================
+[2026-06-05T11:10:25.263+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.16s           2026-06-05T11:10:01                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.13s           2026-06-05T11:10:01                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.13s           2026-06-05T11:10:01                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.13s           2026-06-05T11:10:01                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.12s           2026-06-05T11:10:01                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:09:58                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:10:01                       3
+================================================================================
+[2026-06-05T11:10:55.967+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.50s           2026-06-05T11:10:32                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.50s           2026-06-05T11:10:32                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.34s           2026-06-05T11:10:33                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.25s           2026-06-05T11:10:33                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.23s           2026-06-05T11:10:33                      12
+/opt/airflow/dags/common.py                                            0           0  0.16s           2026-06-05T11:10:33                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:10:29                       5
+================================================================================
+[2026-06-05T11:25:41.069+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:25:41.258+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:38:36.628+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:38:39.043+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:38:41.664+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.56s           2026-06-05T11:38:39                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.44s           2026-06-05T11:38:40                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.41s           2026-06-05T11:38:39                       5
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.40s           2026-06-05T11:38:40                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.37s           2026-06-05T11:38:40                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.36s           2026-06-05T11:38:40                      10
+/opt/airflow/dags/common.py                                            0           0  0.15s           2026-06-05T11:38:40                       3
+================================================================================
+[2026-06-05T11:39:11.966+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.16s           2026-06-05T11:39:10                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:39:10                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.14s           2026-06-05T11:39:10                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.14s           2026-06-05T11:39:10                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.12s           2026-06-05T11:39:10                       5
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.11s           2026-06-05T11:39:10                      12
+/opt/airflow/dags/common.py                                            0           0  0.04s           2026-06-05T11:39:10                       3
+================================================================================
+[2026-06-05T11:39:42.039+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.12s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.11s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.10s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.10s           2026-06-05T11:39:41                      10
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:39:42                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.09s           2026-06-05T11:39:41                       5
+================================================================================
+[2026-06-05T11:40:12.718+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py               797  0.01s             1           0  0.12s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.11s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.10s           2026-06-05T11:39:41                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.10s           2026-06-05T11:39:41                      10
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:39:42                       3
+/opt/airflow/dags/dbt_full_dag.py               794  0.02s             0           1  0.09s           2026-06-05T11:39:41                       5
+================================================================================
+[2026-06-05T11:40:42.993+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py               832  0.01s             1           0  0.19s           2026-06-05T11:40:12                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:40:13                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.16s           2026-06-05T11:40:13                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:40:13                      12
+/opt/airflow/dags/dbt_full_dag.py               829  0.02s             0           1  0.15s           2026-06-05T11:40:12                       5
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.14s           2026-06-05T11:40:13                      10
+/opt/airflow/dags/common.py                                            0           0  0.06s           2026-06-05T11:40:13                       3
+================================================================================
+[2026-06-05T11:41:13.065+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.14s           2026-06-05T11:40:43                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:40:43                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.11s           2026-06-05T11:40:43                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.11s           2026-06-05T11:40:43                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.09s           2026-06-05T11:40:43                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:40:43                       5
+/opt/airflow/dags/common.py                                            0           0  0.06s           2026-06-05T11:40:43                       3
+================================================================================
+[2026-06-05T11:41:43.192+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.14s           2026-06-05T11:41:13                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.12s           2026-06-05T11:41:13                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:41:13                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.10s           2026-06-05T11:41:13                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.10s           2026-06-05T11:41:13                      10
+/opt/airflow/dags/dbt_full_dag.py               906  0.00s             0           1  0.08s           2026-06-05T11:41:13                       5
+/opt/airflow/dags/common.py                                            0           0  0.07s           2026-06-05T11:41:13                       3
+================================================================================
+[2026-06-05T11:42:14.110+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.12s           2026-06-05T11:41:44                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:41:44                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.11s           2026-06-05T11:41:44                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.10s           2026-06-05T11:41:44                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.09s           2026-06-05T11:41:44                      10
+/opt/airflow/dags/dbt_full_dag.py               948  0.01s             0           1  0.07s           2026-06-05T11:41:43                       5
+/opt/airflow/dags/common.py                                            0           0  0.05s           2026-06-05T11:41:44                       3
+================================================================================
+[2026-06-05T11:42:44.394+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.19s           2026-06-05T11:42:15                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:42:15                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.17s           2026-06-05T11:42:15                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.17s           2026-06-05T11:42:15                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.17s           2026-06-05T11:42:15                      10
+/opt/airflow/dags/dbt_full_dag.py               989  0.01s             0           1  0.14s           2026-06-05T11:42:14                       5
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:42:15                       3
+================================================================================
+[2026-06-05T11:43:14.819+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.22s           2026-06-05T11:42:46                      12
+/opt/airflow/dags/dbt_full_dag.py              1030  0.01s             0           1  0.20s           2026-06-05T11:42:44                       5
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.19s           2026-06-05T11:42:46                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.17s           2026-06-05T11:42:45                      10
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.16s           2026-06-05T11:42:45                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.15s           2026-06-05T11:42:45                      12
+/opt/airflow/dags/common.py                                            0           0  0.13s           2026-06-05T11:42:46                       3
+================================================================================
+[2026-06-05T11:43:37.127+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:43:37.205+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:43:45.391+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.32s           2026-06-05T11:43:16                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.31s           2026-06-05T11:43:16                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.27s           2026-06-05T11:43:16                      10
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.17s           2026-06-05T11:43:16                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:43:16                      12
+/opt/airflow/dags/dbt_full_dag.py              1070  0.01s             0           1  0.11s           2026-06-05T11:43:14                       5
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:43:16                       3
+================================================================================
+[2026-06-05T11:44:15.714+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.23s           2026-06-05T11:43:46                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.22s           2026-06-05T11:43:46                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.17s           2026-06-05T11:43:46                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.15s           2026-06-05T11:43:47                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:43:46                      10
+/opt/airflow/dags/dbt_full_dag.py              1111  0.01s             0           1  0.09s           2026-06-05T11:43:45                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:43:47                       3
+================================================================================
+[2026-06-05T11:44:45.943+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                       PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.20s           2026-06-05T11:44:17                      12
+/opt/airflow/dags/dbt_full_dag.py              1168  0.00s             0           1  0.18s           2026-06-05T11:44:15                       5
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.17s           2026-06-05T11:44:17                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:44:16                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:44:17                      10
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:44:16                      12
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:44:17                       3
+================================================================================
+[2026-06-05T11:45:15.945+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.13s           2026-06-05T11:44:47                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.12s           2026-06-05T11:44:47                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.10s           2026-06-05T11:44:47                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.10s           2026-06-05T11:44:47                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.09s           2026-06-05T11:44:47                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.07s           2026-06-05T11:44:46                       5
+/opt/airflow/dags/common.py                                            0           0  0.05s           2026-06-05T11:44:47                       3
+================================================================================
+[2026-06-05T11:45:46.267+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.31s           2026-06-05T11:45:18                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.30s           2026-06-05T11:45:18                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.26s           2026-06-05T11:45:18                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.23s           2026-06-05T11:45:18                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.23s           2026-06-05T11:45:18                      10
+/opt/airflow/dags/common.py                                            0           0  0.12s           2026-06-05T11:45:18                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:45:17                       5
+================================================================================
+[2026-06-05T11:46:17.045+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:45:49                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.17s           2026-06-05T11:45:49                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.16s           2026-06-05T11:45:49                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.15s           2026-06-05T11:45:48                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:45:48                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.07s           2026-06-05T11:45:47                       5
+/opt/airflow/dags/common.py                                            0           0  0.07s           2026-06-05T11:45:49                       3
+================================================================================
+[2026-06-05T11:46:47.067+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.24s           2026-06-05T11:46:19                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.20s           2026-06-05T11:46:19                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.17s           2026-06-05T11:46:20                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.16s           2026-06-05T11:46:20                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.16s           2026-06-05T11:46:20                      12
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:46:20                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.06s           2026-06-05T11:46:18                       5
+================================================================================
+[2026-06-05T11:47:17.478+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.32s           2026-06-05T11:46:50                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.28s           2026-06-05T11:46:50                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.26s           2026-06-05T11:46:50                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.23s           2026-06-05T11:46:50                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.22s           2026-06-05T11:46:51                      12
+/opt/airflow/dags/common.py                                            0           0  0.13s           2026-06-05T11:46:51                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.07s           2026-06-05T11:46:48                       5
+================================================================================
+[2026-06-05T11:47:47.751+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.29s           2026-06-05T11:47:22                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.25s           2026-06-05T11:47:22                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.22s           2026-06-05T11:47:22                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.19s           2026-06-05T11:47:20                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.17s           2026-06-05T11:47:20                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.15s           2026-06-05T11:47:18                       5
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:47:22                       3
+================================================================================
+[2026-06-05T11:48:18.582+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.21s           2026-06-05T11:47:53                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.19s           2026-06-05T11:47:53                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:47:53                      10
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.13s           2026-06-05T11:47:50                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:47:50                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.12s           2026-06-05T11:47:48                       5
+/opt/airflow/dags/common.py                                            0           0  0.11s           2026-06-05T11:47:53                       3
+================================================================================
+[2026-06-05T11:48:37.346+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:48:37.426+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:48:48.590+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.23s           2026-06-05T11:48:21                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.20s           2026-06-05T11:48:24                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.19s           2026-06-05T11:48:21                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:48:23                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.17s           2026-06-05T11:48:23                      10
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:48:24                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:48:19                       5
+================================================================================
+[2026-06-05T11:49:19.427+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.17s           2026-06-05T11:48:54                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.16s           2026-06-05T11:48:54                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.14s           2026-06-05T11:48:55                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:48:52                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.12s           2026-06-05T11:48:52                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:48:50                       5
+/opt/airflow/dags/common.py                                            0           0  0.06s           2026-06-05T11:48:55                       3
+================================================================================
+[2026-06-05T11:49:50.142+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.13s           2026-06-05T11:49:23                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:49:25                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:49:23                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.11s           2026-06-05T11:49:25                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.11s           2026-06-05T11:49:25                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.07s           2026-06-05T11:49:21                       5
+/opt/airflow/dags/common.py                                            0           0  0.05s           2026-06-05T11:49:25                       3
+================================================================================
+[2026-06-05T11:50:21.038+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.19s           2026-06-05T11:49:56                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:49:54                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.16s           2026-06-05T11:49:54                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.12s           2026-06-05T11:49:56                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.12s           2026-06-05T11:49:56                      10
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:49:56                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.08s           2026-06-05T11:49:52                       5
+================================================================================
+[2026-06-05T11:50:52.016+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.24s           2026-06-05T11:50:25                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.23s           2026-06-05T11:50:25                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.19s           2026-06-05T11:50:27                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:50:27                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.17s           2026-06-05T11:50:27                      12
+/opt/airflow/dags/common.py                                            0           0  0.07s           2026-06-05T11:50:27                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.07s           2026-06-05T11:50:23                       5
+================================================================================
+[2026-06-05T11:51:22.981+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.18s           2026-06-05T11:50:58                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.17s           2026-06-05T11:50:58                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:50:56                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.12s           2026-06-05T11:50:56                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.11s           2026-06-05T11:50:58                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.07s           2026-06-05T11:50:54                       5
+/opt/airflow/dags/common.py                                            0           0  0.06s           2026-06-05T11:50:58                       3
+================================================================================
+[2026-06-05T11:51:53.947+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:51:27                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.15s           2026-06-05T11:51:29                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:51:27                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:51:29                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.14s           2026-06-05T11:51:29                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.09s           2026-06-05T11:51:25                       5
+/opt/airflow/dags/common.py                                            0           0  0.05s           2026-06-05T11:51:29                       3
+================================================================================
+[2026-06-05T11:52:24.704+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.23s           2026-06-05T11:51:58                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.20s           2026-06-05T11:51:58                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.15s           2026-06-05T11:52:00                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.14s           2026-06-05T11:52:00                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.11s           2026-06-05T11:52:00                      10
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:52:00                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.06s           2026-06-05T11:51:56                       5
+================================================================================
+[2026-06-05T11:52:55.561+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.23s           2026-06-05T11:52:29                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.23s           2026-06-05T11:52:29                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.14s           2026-06-05T11:52:26                       5
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.13s           2026-06-05T11:52:31                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.11s           2026-06-05T11:52:31                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.11s           2026-06-05T11:52:31                      10
+/opt/airflow/dags/common.py                                            0           0  0.05s           2026-06-05T11:52:31                       3
+================================================================================
+[2026-06-05T11:53:25.564+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.22s           2026-06-05T11:52:59                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.21s           2026-06-05T11:52:59                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.20s           2026-06-05T11:53:02                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.20s           2026-06-05T11:53:02                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.19s           2026-06-05T11:53:02                      10
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:52:57                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:53:02                       3
+================================================================================
+[2026-06-05T11:53:37.363+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:53:37.402+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:53:55.580+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.22s           2026-06-05T11:53:33                      10
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.20s           2026-06-05T11:53:30                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.19s           2026-06-05T11:53:30                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:53:33                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.15s           2026-06-05T11:53:33                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.13s           2026-06-05T11:53:28                       5
+/opt/airflow/dags/common.py                                            0           0  0.11s           2026-06-05T11:53:33                       3
+================================================================================
+[2026-06-05T11:54:26.493+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.28s           2026-06-05T11:54:04                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.27s           2026-06-05T11:54:02                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.26s           2026-06-05T11:54:02                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.21s           2026-06-05T11:54:04                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.18s           2026-06-05T11:54:04                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:53:59                       5
+/opt/airflow/dags/common.py                                            0           0  0.10s           2026-06-05T11:54:04                       3
+================================================================================
+[2026-06-05T11:54:56.979+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.29s           2026-06-05T11:54:32                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.28s           2026-06-05T11:54:35                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.27s           2026-06-05T11:54:35                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.23s           2026-06-05T11:54:35                      10
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.21s           2026-06-05T11:54:32                      12
+/opt/airflow/dags/common.py                                            0           0  0.13s           2026-06-05T11:54:35                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:54:30                       5
+================================================================================
+[2026-06-05T11:55:27.260+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.24s           2026-06-05T11:55:05                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.18s           2026-06-05T11:55:05                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.17s           2026-06-05T11:55:05                      10
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.15s           2026-06-05T11:55:03                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:55:03                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:55:01                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:55:05                       3
+================================================================================
+[2026-06-05T11:55:57.409+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.20s           2026-06-05T11:55:35                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.19s           2026-06-05T11:55:35                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.18s           2026-06-05T11:55:35                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.17s           2026-06-05T11:55:33                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:55:33                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.10s           2026-06-05T11:55:31                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:55:36                       3
+================================================================================
+[2026-06-05T11:56:27.810+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.26s           2026-06-05T11:56:06                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.20s           2026-06-05T11:56:06                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.20s           2026-06-05T11:56:06                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.17s           2026-06-05T11:56:03                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:56:03                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.14s           2026-06-05T11:56:01                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:56:06                       3
+================================================================================
+[2026-06-05T11:56:58.181+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.21s           2026-06-05T11:56:34                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.21s           2026-06-05T11:56:34                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.20s           2026-06-05T11:56:36                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.20s           2026-06-05T11:56:36                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.19s           2026-06-05T11:56:36                      12
+/opt/airflow/dags/common.py                                            0           0  0.13s           2026-06-05T11:56:36                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.10s           2026-06-05T11:56:32                       5
+================================================================================
+[2026-06-05T11:57:28.560+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.29s           2026-06-05T11:57:07                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.22s           2026-06-05T11:57:04                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.18s           2026-06-05T11:57:04                      12
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.17s           2026-06-05T11:57:06                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.11s           2026-06-05T11:57:06                      10
+/opt/airflow/dags/common.py                                            0           0  0.10s           2026-06-05T11:57:07                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.09s           2026-06-05T11:57:02                       5
+================================================================================
+[2026-06-05T11:57:58.931+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.30s           2026-06-05T11:57:37                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.23s           2026-06-05T11:57:37                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.22s           2026-06-05T11:57:37                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.18s           2026-06-05T11:57:34                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.17s           2026-06-05T11:57:34                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.14s           2026-06-05T11:57:32                       5
+/opt/airflow/dags/common.py                                            0           0  0.09s           2026-06-05T11:57:37                       3
+================================================================================
+[2026-06-05T11:58:28.949+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.18s           2026-06-05T11:58:08                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.18s           2026-06-05T11:58:05                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.18s           2026-06-05T11:58:05                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:58:07                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.14s           2026-06-05T11:58:07                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.09s           2026-06-05T11:58:03                       5
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T11:58:08                       3
+================================================================================
+[2026-06-05T11:58:37.590+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2026-06-05T11:58:37.876+0000] {manager.py:824} INFO - There are 7 files in /opt/airflow/dags
+[2026-06-05T11:58:59.513+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.24s           2026-06-05T11:58:39                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.16s           2026-06-05T11:58:35                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.15s           2026-06-05T11:58:35                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.15s           2026-06-05T11:58:38                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.15s           2026-06-05T11:58:38                      12
+/opt/airflow/dags/common.py                                            0           0  0.10s           2026-06-05T11:58:39                       3
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.09s           2026-06-05T11:58:33                       5
+================================================================================
+[2026-06-05T11:59:29.794+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.35s           2026-06-05T11:59:09                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.34s           2026-06-05T11:59:09                      10
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.23s           2026-06-05T11:59:09                      12
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.14s           2026-06-05T11:59:05                      12
+/opt/airflow/dags/common.py                                            0           0  0.12s           2026-06-05T11:59:09                       3
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.12s           2026-06-05T11:59:05                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.11s           2026-06-05T11:59:03                       5
+================================================================================
+[2026-06-05T11:59:59.906+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.16s           2026-06-05T11:59:36                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.15s           2026-06-05T11:59:40                      12
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.15s           2026-06-05T11:59:36                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.14s           2026-06-05T11:59:40                      10
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.14s           2026-06-05T11:59:40                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.12s           2026-06-05T11:59:34                       5
+/opt/airflow/dags/common.py                                            0           0  0.10s           2026-06-05T11:59:40                       3
+================================================================================
+[2026-06-05T12:00:30.309+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+--------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/extract_streaming_dag.py                             1           0  0.22s           2026-06-05T12:00:10                      12
+/opt/airflow/dags/experiment_dag.py                                    1           0  0.22s           2026-06-05T12:00:10                      10
+/opt/airflow/dags/dbt_test_dag.py                                      1           0  0.20s           2026-06-05T12:00:06                      12
+/opt/airflow/dags/recommender_nightly_dag.py                           1           0  0.19s           2026-06-05T12:00:10                      12
+/opt/airflow/dags/dbt_full_dag.py                                      0           1  0.17s           2026-06-05T12:00:04                       5
+/opt/airflow/dags/recommender_hourly_dag.py                            1           0  0.17s           2026-06-05T12:00:06                      12
+/opt/airflow/dags/common.py                                            0           0  0.08s           2026-06-05T12:00:10                       3
+================================================================================
+[2026-06-05T12:00:51.463+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15

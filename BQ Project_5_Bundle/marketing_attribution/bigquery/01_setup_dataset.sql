@@ -1,0 +1,21 @@
+-- =====================================================================
+-- 01_setup_dataset.sql
+-- Create the BigQuery datasets (equivalent to database schemas).
+-- Run this once in BigQuery Console or via bq CLI:
+--   bq mk --location=US your-gcp-project-id:raw
+--   bq mk --location=US your-gcp-project-id:analytics
+--   bq mk --location=US your-gcp-project-id:meta
+-- Or use the SQL below in the BigQuery SQL workspace.
+-- =====================================================================
+
+-- In BigQuery, datasets replace schemas. Replace YOUR_PROJECT with your GCP project ID.
+-- Datasets must be created via DDL or bq CLI; the statements below are for reference.
+
+-- CREATE SCHEMA IF NOT EXISTS `YOUR_PROJECT.raw`
+--   OPTIONS (location = 'US');
+-- CREATE SCHEMA IF NOT EXISTS `YOUR_PROJECT.analytics`
+--   OPTIONS (location = 'US');
+-- CREATE SCHEMA IF NOT EXISTS `YOUR_PROJECT.meta`
+--   OPTIONS (location = 'US');
+-- CREATE SCHEMA IF NOT EXISTS `YOUR_PROJECT.dbt_test_failures`
+--   OPTIONS (location = 'US');

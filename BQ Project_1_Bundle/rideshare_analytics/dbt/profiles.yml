@@ -1,0 +1,13 @@
+rideshare_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: project-d8d88b02-3334-4b57-b24
+      dataset: rideshare_db
+      keyfile: C:\Users\lohit\BQ Project_1_Bundle\rideshare_analytics\Credentials\project-d8d88b02-3334-4b57-b24-ea005ec99141.json
+      location: US
+      timeout_seconds: 300
+      threads: 4
+

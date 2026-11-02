@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: mart_first_touch_attribution
+    description: "Model A — 100% credit to first touchpoint"
+  - name: mart_last_touch_attribution
+    description: "Model B — 100% credit to last touchpoint"
+  - name: mart_linear_attribution
+    description: "Model C — equal credit across all touchpoints"
+  - name: mart_time_decay_attribution
+    description: "Model D — exponentially-decaying credit toward conversion"
+  - name: mart_markov_attribution
+    description: "Model E — removal-effect Markov-chain attribution (BigQuery Python dbt model)"
+  - name: mart_channel_roas_compared
+    description: "Side-by-side comparison of all 5 models with cost and ROAS"
+  - name: mart_budget_reallocation
+    description: "Recommended budget per channel, by attribution model"
+
+exposures:
+  - name: attribution_executive_dashboard
+    type: dashboard
+    maturity: high
+    description: "Same-revenue, five-attribution-views executive dashboard"
+    depends_on:
+      - ref('mart_channel_roas_compared')
+      - ref('mart_budget_reallocation')
+    owner:
+      name: MSc Capstone
+      email: msc.student@example.com

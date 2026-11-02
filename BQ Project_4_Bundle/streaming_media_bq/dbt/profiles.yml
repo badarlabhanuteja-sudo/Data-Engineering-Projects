@@ -1,0 +1,16 @@
+streaming_media:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('project-d8d88b02-3334-4b57-b24') }}"
+      dataset: dbt_dev
+      location: "{{ env_var('BQ_LOCATION', 'US') }}"
+      threads: 4
+      timeout_seconds: 300
+      priority: interactive
+      compute_region: US
+      job_labels:
+        project: "streaming-media-msc-capstone"
+        env: "dev"

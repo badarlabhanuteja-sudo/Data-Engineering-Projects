@@ -1,0 +1,32 @@
+{{ config(materialized='view') }}
+
+select
+    trip_id,
+    rider_id,
+    driver_id,
+    city_id,
+    request_timestamp,
+    pickup_timestamp,
+    dropoff_timestamp,
+    pickup_lat, pickup_lng,
+    dropoff_lat, dropoff_lng,
+    distance_km,
+    duration_min,
+    base_fare,
+    surge_multiplier,
+    final_fare,
+    coalesce(final_fare, 0) - coalesce(base_fare, 0)  as surge_uplift_inr,
+    payment_method,
+    lower(trip_status)                                as trip_status,
+    case when trip_status = 'completed' then true else false end as is_completed,
+    case when trip_status = 'cancelled' then true else false end as is_cancelled,
+    rating_by_rider,
+    rating_by_driver,
+    TIMESTAMP_DIFF(pickup_timestamp, request_timestamp, SECOND) as wait_seconds,
+    DATE(request_timestamp)                            as request_date,
+    EXTRACT(hour FROM request_timestamp)               as request_hour,
+    EXTRACT(dayofweek FROM request_timestamp)          as request_dow,
+    created_at,
+    updated_at,
+    CURRENT_TIMESTAMP() as _loaded_at
+from {{ source('raw', 'raw_trips') }}

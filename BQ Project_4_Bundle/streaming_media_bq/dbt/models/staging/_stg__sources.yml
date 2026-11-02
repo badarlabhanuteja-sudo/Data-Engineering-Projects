@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('GCP_PROJECT_ID') }}"
+    schema: raw
+    tables:
+      - name: raw_titles
+      - name: raw_users
+      - name: raw_sessions
+      - name: raw_view_events
+      - name: raw_ratings
+      - name: raw_recommendation_clicks

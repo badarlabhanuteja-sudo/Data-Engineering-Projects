@@ -1,0 +1,670 @@
+{
+  "n_runs": 33,
+  "models": [
+    "first_touch",
+    "last_touch",
+    "linear",
+    "markov",
+    "time_decay"
+  ],
+  "channels": [
+    "email",
+    "google_ads",
+    "meta_ads",
+    "tiktok_ads",
+    "web"
+  ],
+  "friedman": [
+    {
+      "channel": "email",
+      "n_runs": 30,
+      "n_models": 5,
+      "friedman_statistic": 115.5200000000001,
+      "friedman_p_value": 4.833174910883856e-24,
+      "significant_at_0p05": "True",
+      "mean_share_first_touch": 0.06151558141110515,
+      "mean_share_last_touch": 0.056893468525090536,
+      "mean_share_linear": 0.06064803861319319,
+      "mean_share_markov": 0.19893663269095038,
+      "mean_share_time_decay": 0.06049440052546172
+    },
+    {
+      "channel": "google_ads",
+      "n_runs": 30,
+      "n_models": 5,
+      "friedman_statistic": 120.0,
+      "friedman_p_value": 5.341471565244885e-25,
+      "significant_at_0p05": "True",
+      "mean_share_first_touch": 0.15764137085902413,
+      "mean_share_last_touch": 0.08960234154006991,
+      "mean_share_linear": 0.11894176802847915,
+      "mean_share_markov": 0.19609291290708614,
+      "mean_share_time_decay": 0.11789685577449821
+    },
+    {
+      "channel": "meta_ads",
+      "n_runs": 29,
+      "n_models": 5,
+      "friedman_statistic": 116.0,
+      "friedman_p_value": 3.8174386061308124e-24,
+      "significant_at_0p05": "True",
+      "mean_share_first_touch": 0.13764977255343833,
+      "mean_share_last_touch": 0.11025171564878798,
+      "mean_share_linear": 0.12305418703056448,
+      "mean_share_markov": 0.2031847494882036,
+      "mean_share_time_decay": 0.12255762760083512
+    },
+    {
+      "channel": "tiktok_ads",
+      "n_runs": 29,
+      "n_models": 5,
+      "friedman_statistic": 116.0,
+      "friedman_p_value": 3.8174386061308124e-24,
+      "significant_at_0p05": "True",
+      "mean_share_first_touch": 0.08398361159257715,
+      "mean_share_last_touch": 0.07625966239555246,
+      "mean_share_linear": 0.08106457338533848,
+      "mean_share_markov": 0.19761016917820384,
+      "mean_share_time_decay": 0.0807952567892742
+    },
+    {
+      "channel": "web",
+      "n_runs": 29,
+      "n_models": 5,
+      "friedman_statistic": 116.0,
+      "friedman_p_value": 3.8174386061308124e-24,
+      "significant_at_0p05": "True",
+      "mean_share_first_touch": 0.5592456367193482,
+      "mean_share_last_touch": 0.6670812087128392,
+      "mean_share_linear": 0.6163411549272116,
+      "mean_share_markov": 0.2041751196285938,
+      "mean_share_time_decay": 0.6183078215384928
+    }
+  ],
+  "pairwise": [
+    {
+      "channel": "email",
+      "model_a": "first_touch",
+      "model_b": "last_touch",
+      "mean_diff": 0.0046221128860146265,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 3.4603037595433515,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "first_touch",
+      "model_b": "linear",
+      "mean_diff": 0.0008675427979119597,
+      "wilcoxon_p": 6.275129355673038e-06,
+      "cohens_d": 1.190276565649116,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "first_touch",
+      "model_b": "markov",
+      "mean_diff": -0.13742105127984522,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -112.14070036395374,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "first_touch",
+      "model_b": "time_decay",
+      "mean_diff": 0.0010211808856434364,
+      "wilcoxon_p": 2.574942943734176e-06,
+      "cohens_d": 1.3747844901580506,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "last_touch",
+      "model_b": "linear",
+      "mean_diff": -0.0037545700881026676,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -5.059257857328937,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "last_touch",
+      "model_b": "markov",
+      "mean_diff": -0.14204316416585985,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -92.31318173825979,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "last_touch",
+      "model_b": "time_decay",
+      "mean_diff": -0.0036009320003711908,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -4.998707975359164,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "linear",
+      "model_b": "markov",
+      "mean_diff": -0.13828859407775715,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -123.90768397641752,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "linear",
+      "model_b": "time_decay",
+      "mean_diff": 0.00015363808773147665,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 5.3816711256621605,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "email",
+      "model_a": "markov",
+      "model_b": "time_decay",
+      "mean_diff": 0.13844223216548865,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 122.58604837340486,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "first_touch",
+      "model_b": "last_touch",
+      "mean_diff": 0.06803902931895418,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 41.59767362586166,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "first_touch",
+      "model_b": "linear",
+      "mean_diff": 0.03869960283054497,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 41.41389534282019,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "first_touch",
+      "model_b": "markov",
+      "mean_diff": -0.038451542048062004,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -26.083905938117766,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "first_touch",
+      "model_b": "time_decay",
+      "mean_diff": 0.03974451508452591,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 41.64354582203936,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "last_touch",
+      "model_b": "linear",
+      "mean_diff": -0.029339426488409207,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -35.33899637798776,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "last_touch",
+      "model_b": "markov",
+      "mean_diff": -0.10649057136701617,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -104.3846882378767,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "last_touch",
+      "model_b": "time_decay",
+      "mean_diff": -0.02829451423442828,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -35.019645225551265,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "linear",
+      "model_b": "markov",
+      "mean_diff": -0.07715114487860696,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": -88.26756178471146,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "linear",
+      "model_b": "time_decay",
+      "mean_diff": 0.0010449122539809346,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 33.72417884199622,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "google_ads",
+      "model_a": "markov",
+      "model_b": "time_decay",
+      "mean_diff": 0.07819605713258788,
+      "wilcoxon_p": 1.714847401033251e-06,
+      "cohens_d": 89.7579655758617,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "first_touch",
+      "model_b": "last_touch",
+      "mean_diff": 0.02739805690465036,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 14.981492460563386,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "first_touch",
+      "model_b": "linear",
+      "mean_diff": 0.014595585522873865,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 15.18781029256527,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "first_touch",
+      "model_b": "markov",
+      "mean_diff": -0.06553497693476523,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -44.37296378902896,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "first_touch",
+      "model_b": "time_decay",
+      "mean_diff": 0.015092144952603222,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 15.11858475155014,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "last_touch",
+      "model_b": "linear",
+      "mean_diff": -0.012802471381776497,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -13.166012601654842,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "last_touch",
+      "model_b": "markov",
+      "mean_diff": -0.09293303383941562,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -58.53992069807299,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "last_touch",
+      "model_b": "time_decay",
+      "mean_diff": -0.012305911952047137,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -13.235441414098675,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "linear",
+      "model_b": "markov",
+      "mean_diff": -0.08013056245763911,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -70.32105705543056,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "linear",
+      "model_b": "time_decay",
+      "mean_diff": 0.0004965594297293568,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 9.618910588287422,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "meta_ads",
+      "model_a": "markov",
+      "model_b": "time_decay",
+      "mean_diff": 0.08062712188736847,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 70.46310260865906,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "first_touch",
+      "model_b": "last_touch",
+      "mean_diff": 0.007723949197024683,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 5.408357859078431,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "first_touch",
+      "model_b": "linear",
+      "mean_diff": 0.002919038207238651,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 3.5147076223077613,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "first_touch",
+      "model_b": "markov",
+      "mean_diff": -0.11362655758562668,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -77.70370811756096,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "first_touch",
+      "model_b": "time_decay",
+      "mean_diff": 0.0031883548033029285,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 3.746495424213861,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "last_touch",
+      "model_b": "linear",
+      "mean_diff": -0.004804910989786034,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -6.735527794954967,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "last_touch",
+      "model_b": "markov",
+      "mean_diff": -0.12135050678265134,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -116.2149473601695,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "last_touch",
+      "model_b": "time_decay",
+      "mean_diff": -0.004535594393721755,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -6.587167270259411,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "linear",
+      "model_b": "markov",
+      "mean_diff": -0.11654559579286532,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -111.73784956575932,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "linear",
+      "model_b": "time_decay",
+      "mean_diff": 0.0002693165960642777,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 7.527913922857862,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "tiktok_ads",
+      "model_a": "markov",
+      "model_b": "time_decay",
+      "mean_diff": 0.11681491238892959,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 112.69857433481032,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "first_touch",
+      "model_b": "last_touch",
+      "mean_diff": -0.10783557199349081,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -41.57914443683296,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "first_touch",
+      "model_b": "linear",
+      "mean_diff": -0.05709551820786352,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -38.63468567587994,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "first_touch",
+      "model_b": "markov",
+      "mean_diff": 0.35507051709075427,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 141.55240290316829,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "first_touch",
+      "model_b": "time_decay",
+      "mean_diff": -0.059062184819144825,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -38.67734762378988,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "last_touch",
+      "model_b": "linear",
+      "mean_diff": 0.050740053785627307,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 42.964123252407454,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "last_touch",
+      "model_b": "markov",
+      "mean_diff": 0.46290608908424496,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 192.2946976995919,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "last_touch",
+      "model_b": "time_decay",
+      "mean_diff": 0.048773387174346004,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 43.151594767601964,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "linear",
+      "model_b": "markov",
+      "mean_diff": 0.41216603529861773,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": 203.32495421571122,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "linear",
+      "model_b": "time_decay",
+      "mean_diff": -0.001966666611281298,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -31.468470081002213,
+      "significant_at_0p05": "True"
+    },
+    {
+      "channel": "web",
+      "model_a": "markov",
+      "model_b": "time_decay",
+      "mean_diff": -0.4141327019098991,
+      "wilcoxon_p": 2.5373017400046292e-06,
+      "cohens_d": -202.85850677259018,
+      "significant_at_0p05": "True"
+    }
+  ],
+  "reallocation": [
+    {
+      "channel": "email",
+      "min_share": 0.05672182222952087,
+      "max_share": 0.19893663269095038,
+      "spread": 0.1422148104614295,
+      "spread_pct": 1.6231469579446673,
+      "by_model": {
+        "first_touch": 0.06140034603953714,
+        "last_touch": 0.05672182222952087,
+        "linear": 0.06053039213291365,
+        "markov": 0.19893663269095038,
+        "time_decay": 0.06049440052546172
+      }
+    },
+    {
+      "channel": "google_ads",
+      "min_share": 0.08957154213219609,
+      "max_share": 0.1960929129070861,
+      "spread": 0.10652137077489002,
+      "spread_pct": 0.7828689650907412,
+      "by_model": {
+        "first_touch": 0.15777552051167248,
+        "last_touch": 0.08957154213219609,
+        "linear": 0.11899011689214112,
+        "markov": 0.1960929129070861,
+        "time_decay": 0.1178968557744982
+      }
+    },
+    {
+      "channel": "meta_ads",
+      "min_share": 0.11036635004099257,
+      "max_share": 0.2031847494882036,
+      "spread": 0.09281839944721101,
+      "spread_pct": 0.6659824972960358,
+      "by_model": {
+        "first_touch": 0.13760475888430326,
+        "last_touch": 0.11036635004099257,
+        "linear": 0.12311594799389469,
+        "markov": 0.2031847494882036,
+        "time_decay": 0.12258133781234296
+      }
+    },
+    {
+      "channel": "tiktok_ads",
+      "min_share": 0.07624358660695463,
+      "max_share": 0.1976101691782038,
+      "spread": 0.12136658257124916,
+      "spread_pct": 1.167851750634466,
+      "by_model": {
+        "first_touch": 0.08393046934432707,
+        "last_touch": 0.07624358660695463,
+        "linear": 0.08105355889650052,
+        "markov": 0.1976101691782038,
+        "time_decay": 0.08077689525720899
+      }
+    },
+    {
+      "channel": "web",
+      "min_share": 0.20417511962859383,
+      "max_share": 0.6670966989903359,
+      "spread": 0.46292157936174205,
+      "spread_pct": 0.8684736131256231,
+      "by_model": {
+        "first_touch": 0.55928890522016,
+        "last_touch": 0.6670966989903359,
+        "linear": 0.6163335227539282,
+        "markov": 0.20417511962859383,
+        "time_decay": 0.6182505106304882
+      }
+    }
+  ],
+  "kendall_tau": [
+    {
+      "model_a": "first_touch",
+      "model_b": "last_touch",
+      "kendall_tau": 0.7999999999999999,
+      "p_value": 0.08333333333333333
+    },
+    {
+      "model_a": "first_touch",
+      "model_b": "linear",
+      "kendall_tau": 0.7999999999999999,
+      "p_value": 0.08333333333333333
+    },
+    {
+      "model_a": "first_touch",
+      "model_b": "markov",
+      "kendall_tau": 0.19999999999999998,
+      "p_value": 0.8166666666666667
+    },
+    {
+      "model_a": "first_touch",
+      "model_b": "time_decay",
+      "kendall_tau": 0.7999999999999999,
+      "p_value": 0.08333333333333333
+    },
+    {
+      "model_a": "last_touch",
+      "model_b": "linear",
+      "kendall_tau": 0.9999999999999999,
+      "p_value": 0.016666666666666666
+    },
+    {
+      "model_a": "last_touch",
+      "model_b": "markov",
+      "kendall_tau": 0.39999999999999997,
+      "p_value": 0.48333333333333334
+    },
+    {
+      "model_a": "last_touch",
+      "model_b": "time_decay",
+      "kendall_tau": 0.9999999999999999,
+      "p_value": 0.016666666666666666
+    },
+    {
+      "model_a": "linear",
+      "model_b": "markov",
+      "kendall_tau": 0.39999999999999997,
+      "p_value": 0.48333333333333334
+    },
+    {
+      "model_a": "linear",
+      "model_b": "time_decay",
+      "kendall_tau": 0.9999999999999999,
+      "p_value": 0.016666666666666666
+    },
+    {
+      "model_a": "markov",
+      "model_b": "time_decay",
+      "kendall_tau": 0.39999999999999997,
+      "p_value": 0.48333333333333334
+    }
+  ]
+}

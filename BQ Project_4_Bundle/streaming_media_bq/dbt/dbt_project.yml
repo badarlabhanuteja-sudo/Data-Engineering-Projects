@@ -1,0 +1,51 @@
+name: 'streaming_media'
+version: '1.0.0'
+config-version: 2
+profile: 'streaming_media'
+model-paths:    ["models"]
+seed-paths:     ["seeds"]
+test-paths:     ["tests"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages", "logs"]
+vars:
+  analysis_as_of_date: '2025-12-31'
+  recency_window_days: 30
+  recommender_top_k: 10
+models:
+  streaming_media:
+    +persist_docs:
+      relation: true
+      columns: true
+    staging:
+      +schema: staging
+      +materialized: view
+      +tags: ["staging", "silver"]
+    intermediate:
+      +schema: intermediate
+      +materialized: ephemeral
+      +tags: ["intermediate", "silver"]
+    marts:
+      +schema: marts
+      +tags: ["marts", "gold"]
+      core:            { +materialized: table }
+      engagement:      { +materialized: table, +tags: ["engagement"] }
+      content:         { +materialized: table, +tags: ["content"] }
+      recommendations: { +materialized: table, +tags: ["recommendations"], +enabled: false }
+snapshots:
+  streaming_media:
+    +target_schema: snapshots
+seeds:
+  streaming_media:
+    +schema: seeds
+    +quote_columns: false
+tests:
+  +severity: error
+  +store_failures: true
+  +schema: dbt_test_failures
+on-run-start:
+  - "{{ create_run_history_table_if_not_exists() }}"
+on-run-end:
+  - "{{ insert_run_history_row(results) }}"

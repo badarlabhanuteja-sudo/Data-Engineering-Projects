@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: "Cleaned customer master"
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: email
+        data_tests:
+          - dbt_expectations.expect_column_value_lengths_to_be_between:
+              min_value: 5
+              max_value: 255
+      - name: signup_date
+        data_tests: [not_null]
+      - name: customer_tier
+        data_tests:
+          - accepted_values:
+              values: ['bronze', 'silver', 'gold', 'platinum']
+
+  - name: stg_products
+    columns:
+      - name: product_id
+        data_tests: [not_null, unique]
+      - name: unit_price
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: stg_categories
+    columns:
+      - name: category_id
+        data_tests: [not_null, unique]
+
+  - name: stg_orders
+    columns:
+      - name: order_id
+        data_tests: [not_null, unique]
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: order_status
+        data_tests:
+          - accepted_values:
+              values: ['delivered', 'cancelled', 'returned']
+      - name: total_amount
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: ">= 0"
+
+  - name: stg_order_items
+    columns:
+      - name: order_item_id
+        data_tests: [not_null, unique]
+      - name: order_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: product_id
+        data_tests:
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+      - name: quantity
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+
+  - name: stg_web_events
+    columns:
+      - name: event_id
+        data_tests: [not_null]
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              values: ['page_view','product_view','search','add_to_cart',
+                       'remove_from_cart','begin_checkout','complete_purchase',
+                       'login','signup','wishlist_add']
+
+  - name: stg_email_events
+    columns:
+      - name: email_event_id
+        data_tests: [not_null, unique]
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              values: ['sent','open','click','unsubscribe']

@@ -1,0 +1,8 @@
+version: 2
+
+seeds:
+  - name: country_codes
+    description: "ISO country code → name + region + currency"
+    columns:
+      - name: country_code
+        data_tests: [not_null, unique]

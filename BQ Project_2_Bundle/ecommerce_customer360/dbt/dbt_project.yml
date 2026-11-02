@@ -1,0 +1,74 @@
+name: 'ecommerce_customer360'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ecommerce_customer360'
+
+model-paths:    ["models"]
+seed-paths:     ["seeds"]
+test-paths:     ["tests"]
+macro-paths:    ["macros"]
+snapshot-paths: ["snapshots"]
+analysis-paths: ["analyses"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+vars:
+  # As-of date used for RFM recency, churn windows, etc.
+  # Keep aligned to data generator's "today" (2025-12-31).
+  analysis_as_of_date: '2025-12-31'
+  # Churn window: customer is "churned" if no order in the last N days
+  churn_window_days: 90
+  # RFM quintile binning
+  rfm_n_bins: 5
+
+models:
+  ecommerce_customer360:
+    staging:
+      +dataset: STAGING          # BigQuery uses 'dataset' not 'schema'
+      +materialized: view
+      +tags: ["staging", "silver"]
+
+    intermediate:
+      +dataset: INTERMEDIATE
+      +materialized: ephemeral
+      +tags: ["intermediate", "silver"]
+
+    marts:
+      +dataset: MARTS
+      +tags: ["marts", "gold"]
+      core:
+        +materialized: table
+        +tags: ["core"]
+      customer:
+        +materialized: table
+        +tags: ["customer"]
+      product:
+        +materialized: table
+        +tags: ["product"]
+      finance:
+        +materialized: table
+        +tags: ["finance"]
+
+snapshots:
+  ecommerce_customer360:
+    +target_schema: SNAPSHOTS
+    +strategy: timestamp
+    +updated_at: updated_at
+
+seeds:
+  ecommerce_customer360:
+    +dataset: seeds              # BigQuery uses 'dataset' not 'schema'
+    +quote_columns: false
+
+tests:
+  +severity: error
+  +store_failures: true
+  +schema: dbt_test_failures
+
+
+
